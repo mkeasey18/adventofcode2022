@@ -1,33 +1,33 @@
 # part 1
-# with open('day2_inputs.txt') as f:
-#     inputs = [[line[0], line[2]] for line in f.readlines()]
+with open('day2_inputs.txt') as f:
+    inputs = [[line[0], line[2]] for line in f.readlines()]
 
-# choice_dict = {
-#     'X': {
-#         'value': 1,
-#         'beats': 'C',
-#         'draws': 'A'
-#     },
-#     'Y': {
-#         'value': 2,
-#         'beats': 'A',
-#         'draws': 'B'
-#     },
-#     'Z': {
-#         'value': 3,
-#         'beats': 'B',
-#         'draws': 'C'
-#     },
-# }
+choice_dict = {
+    'X': {
+        'value': 1,
+        'beats': 'C',
+        'draws': 'A'
+    },
+    'Y': {
+        'value': 2,
+        'beats': 'A',
+        'draws': 'B'
+    },
+    'Z': {
+        'value': 3,
+        'beats': 'B',
+        'draws': 'C'
+    },
+}
 
-# total_score = 0
+total_score = 0
 
-# for opp, player in inputs:
-#     total_score += choice_dict[player]['value']
-#     if opp in choice_dict[player]['draws']: total_score += 3
-#     if opp in choice_dict[player]['beats']: total_score += 6
+for opp, player in inputs:
+    total_score += choice_dict[player]['value']
+    if opp in choice_dict[player]['draws']: total_score += 3
+    if opp in choice_dict[player]['beats']: total_score += 6
 
-# print(total_score)
+print(total_score)
     
 # part 2
 with open('day2_inputs.txt') as f:
