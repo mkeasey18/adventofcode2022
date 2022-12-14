@@ -69,3 +69,5 @@ for opp, match_end in inputs:
     total_score += choice_dict[player]['value']
 
 print(total_score)
+
+print(int('a'))
